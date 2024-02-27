@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Challenge Instancer</title>
+</head>
+<body>
+    <p>Placeholder message</p>
+    {% if not port %}
+        <a href="{{ url_for('generate') }}">Start challenge attempt</a>
+    {% else %}
+        <p>Your challenge can be accessed at port: {{ port }}</p>
+        <p>Please give it some time, the containers need time to be created.</p>
+    {% endif %}
+</body>
+</html>

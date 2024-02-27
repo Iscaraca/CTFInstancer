@@ -9,7 +9,7 @@ I did not make this with security or efficiency in mind. I just wanted to make s
 To run the instancer:
 ```
 $ docker build -t instancer .
-$ docker run -v "/var/run/docker.sock:/var/run/docker.sock" instancer
+$ docker run -v "/var/run/docker.sock:/var/run/docker.sock" -p 80:80 instancer
 ```
 
 The second command mounts the host's socket to allow sharing of the daemon between the container and the host. This also means that instances
